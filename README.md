@@ -1,11 +1,11 @@
-# Better X 0.3.58 — Test Build
+# Better X 0.3.59 — Test Build
 
 A free gear-comparison addon for World of Warcraft: Forever, levels 1–60.
 
 ## Download and update
 
 Latest release: https://github.com/bakerbiz420-collab/BetterX/releases/latest
-Download **BetterX-0.3.58.zip** under Assets. GitHub's automatic Source code
+Download **BetterX-0.3.59.zip** under Assets. GitHub's automatic Source code
 archives are not addon installers.
 
 1. Exit World of Warcraft completely.
@@ -14,10 +14,23 @@ archives are not addon installers.
    download folder. Copy that folder into `_forever_/Interface/AddOns/`, replacing
    the existing BetterX folder/files.
 4. Final path: `_forever_/Interface/AddOns/BetterX/BetterX.toc`.
-5. Restart WoW, enable Better X, and confirm version 0.3.58 in BX.
+5. Restart WoW, enable Better X, and confirm version 0.3.59 in BX.
 
 Keep the game's WTF folder and saved preferences. Do not install a folder named
-BetterX-0.3.58 or BetterX-0 as the addon. Windows/Mac instructions are included.
+BetterX-0.3.59 or BetterX-0 as the addon. Windows/Mac instructions are included.
+
+## November 19–20 hotfix review
+
+- Retribution's equipped two-hander bonus now reaches Holy spells as well as
+  physical/Holy weapon attacks, exactly once. Healing is unaffected.
+- Stormshroud's two-/four-piece damage/AP and current three-piece Energy proc
+  are recognized. Three pieces use 3% for 18 Energy on landed melee attacks,
+  funding Rogue/Cat actions with bounded average feedback. Exact proc timing
+  and Energy overflow remain approximate; no Mana/Rage benefit is invented.
+- Blade Flurry's Shank copy needs another target. Details explain why that
+  extra-target damage is excluded from the single-target comparison.
+- Demonic Aegis armor buffs remain unmodeled; removing the talent never retains
+  a modeled armor snapshot. Active talent changes continue to refresh gear.
 
 ## One window, four tabs
 
@@ -82,7 +95,7 @@ or GUIDs are saved.
 ## Verification and current limits
 
 - 6,896 current client regression assertions pass; 18 Lua modules compile.
-- Full all-28-profile/hybrid/pet/proc suite: 45,884 assertions. Current paired-priority behavior and previous comparisons are covered; native
+- Full all-28-profile/hybrid/pet/proc suite: 45,932 assertions. Current paired-priority behavior and previous comparisons are covered; native
   game acceptance of the new choices and binding completion remains pending.
 - Native testers confirmed the basic arrival/equip offer and the startup warning
   fix. The newest tabbed layout, Sky Elf identity compatibility and broader
