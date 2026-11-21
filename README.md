@@ -1,11 +1,11 @@
-# Better X 0.3.56 — Test Build
+# Better X 0.3.58 — Test Build
 
 A free gear-comparison addon for World of Warcraft: Forever, levels 1–60.
 
 ## Download and update
 
 Latest release: https://github.com/bakerbiz420-collab/BetterX/releases/latest
-Download **BetterX-0.3.56.zip** under Assets. GitHub's automatic Source code
+Download **BetterX-0.3.58.zip** under Assets. GitHub's automatic Source code
 archives are not addon installers.
 
 1. Exit World of Warcraft completely.
@@ -14,10 +14,10 @@ archives are not addon installers.
    download folder. Copy that folder into `_forever_/Interface/AddOns/`, replacing
    the existing BetterX folder/files.
 4. Final path: `_forever_/Interface/AddOns/BetterX/BetterX.toc`.
-5. Restart WoW, enable Better X, and confirm version 0.3.56 in BX.
+5. Restart WoW, enable Better X, and confirm version 0.3.58 in BX.
 
 Keep the game's WTF folder and saved preferences. Do not install a folder named
-BetterX-0.3.56 or BetterX-0 as the addon. Windows/Mac instructions are included.
+BetterX-0.3.58 or BetterX-0 as the addon. Windows/Mac instructions are included.
 
 ## One window, four tabs
 
@@ -28,7 +28,10 @@ BetterX-0.3.56 or BetterX-0 as the addon. Windows/Mac instructions are included.
 
 Main tooltips show item-to-item percentage and BX score. Overall modeled impact
 and health/armor tradeoffs are in details. Damage/Healing choices remain
-separate; mixed priorities show both. Ordinary durability no longer turns
+separate; mixed priorities show both. Paladins, Warriors and Druids can also
+choose Damage first / Tanking second or Tanking first / Damage second. These
+show both roles, use the first role for recommendations and the second for
+primary ties, and do not include Healing. Existing saved choices stay intact. Ordinary durability no longer turns
 improved damage/healing output into an output downgrade; tank defense and
 actual resource/health mechanics remain relevant. Percentages are item values,
 not promises of an exact DPS/HPS gain or universal best-in-slot ranking.
@@ -45,7 +48,9 @@ selected, and ask before applying resulting upgrades after combat.
 With binding confirmation enabled (default), the first Equip click only opens
 **Bind & Equip / Cancel** in that same box. No equip request is sent before
 explicit Bind & Equip approval. Cancel/close does not approve. Refundable items
-also require explicit confirmation. Blizzard may show its own warning afterward.
+also require explicit confirmation. After that approval, BX completes a matching
+native binding/refund confirmation for that exact item and slot, without asking
+you to click it again. Unverified, unrelated or unapproved warnings stay manual.
 
 Lock selected slots and choose a minimum item upgrade (default 5%). Empty-slot
 upgrades without a positive percentage baseline ask for review. A statless item
@@ -76,10 +81,9 @@ or GUIDs are saved.
 
 ## Verification and current limits
 
-- 6,735 current client regression assertions pass; 18 Lua modules compile.
-- Last full all-28-profile/hybrid/pet/proc suite: 44,846 assertions. Subsequent
-  changes were tested in the client suite; unchanged numerical matrices were
-  not repeatedly rerun.
+- 6,896 current client regression assertions pass; 18 Lua modules compile.
+- Full all-28-profile/hybrid/pet/proc suite: 45,884 assertions. Current paired-priority behavior and previous comparisons are covered; native
+  game acceptance of the new choices and binding completion remains pending.
 - Native testers confirmed the basic arrival/equip offer and the startup warning
   fix. The newest tabbed layout, Sky Elf identity compatibility and broader
   death/message coverage still need in-game acceptance. Offline tests do not
